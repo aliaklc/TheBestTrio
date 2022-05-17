@@ -18,13 +18,16 @@ public class test1_StepDef {
     public void user_go_to_google_com() {
 
 
-        Driver.getDriver().get("https:/www.google.com");
+        Driver.getDriver().get("https:/www.google.com"); // driver1
+
 
 
     }
 
     @When("user search Cucumber")
     public void user_search_cucumber() {
+
+        Driver.getDriver().get("https:/www.google.com");
 
         googleElements.searchInput.sendKeys("cucumber");
         googleElements.searchBtn.click();
